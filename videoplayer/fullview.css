@@ -1,0 +1,49 @@
+.fullcontainer
+{
+	width: 100%;
+	height: auto;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.outsidefullviewdiv
+{
+	width: auto;
+	height: auto;
+	margin-left: 5%;
+	margin-top: 7%;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+.image
+{
+	width: 500px;
+	height: auto;
+}
+.comp{
+	width: 45%;
+	height: auto;
+	background-color: floralwhite;
+	margin-left: 30%;
+	margin-left: 7%;
+	padding: 2%;
+
+}
+.labelfull
+{
+	font-weight: 600;
+	font-size: xx-large;
+}
+.parag
+{
+	font-size: large;
+	font-weight: 400;
+	font-family: sans-serif;
+	font-display: fallback;
+	margin-top: 7%;
+	margin-bottom: 5%;
+
+}

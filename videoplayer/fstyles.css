@@ -1,0 +1,39 @@
+.forgot
+{
+	width: 100%;
+	height: auto;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+.foutside
+{
+	width: 30%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+	border: 1px solid beige;
+	margin-left: 20%;
+}
+.finput
+{
+	width: 300px;
+	height: 40px;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+	margin-left: 1%;
+	border: 1px solid beige;
+	border-collapse: collapse;
+	border-radius: 4px;
+	background-color: floralwhite;
+	margin-bottom: 4%;
+
+}
+.fforms
+{
+	margin: 5%;
+}

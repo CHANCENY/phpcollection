@@ -1,0 +1,117 @@
+.containernavigations{
+	
+	background-color: white;
+	border-radius: 5px;
+	width: 100%;
+	height: auto;
+	border: 1px solid ghostwhite;
+	box-shadow: 2px 2px 2px grey;
+	top: -15px;
+	
+
+
+
+}
+.containernavigations:hover{
+	box-shadow: 2px 2px 2px yellowgreen;
+	background-color: #f8f8f8;
+}
+.navaclosingnow{
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.barrowlling{
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.logonavigationspart{
+	width: 70px;
+	height: 70px;
+	border-radius: 100px;
+	margin-left: 10px;
+	margin-top: 6px;
+	flex-wrap: wrap;
+	display: flex;
+}
+.logonavigationspart:hover{
+	box-shadow: 1px 1px grey;
+	background: white;
+}
+.brandnamingpart{
+	margin: 30px;
+	margin-left: 15px;
+	margin-top: 40px;
+	font-family: sans-serif;
+	font-size: large;
+	color: black;
+}
+.listingdivision{
+	margin-left: auto;
+	flex-wrap: wrap;
+	display: inline-flex;
+
+}
+.gopaging{
+	display: inline-grid;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+.listingallelement{
+	margin-right: 20px;
+}
+.linkingpages{
+	text-decoration: none;
+	color: black;
+	font-family: sans-serif;
+	font-size: large;
+}
+.linkingpages:hover{
+	border: 1px solid ghostwhite;
+	border-width: 10px;
+	color: red;
+	text-decoration: underline;
+}
+.inputboxsearching{
+	border: 1px solid ghostwhite;
+	border-color: ghostwhite;
+	border-radius: 7px;
+	background-color: white;
+	color: black;
+	border-collapse: collapse;
+	width: 200px;
+	height: 30px;
+	box-shadow: 1px 1px grey;
+}
+.inputboxsearching-2{
+	border: 1px solid ghostwhite;
+	border-color: ghostwhite;
+	border-radius: 7px;
+	background-color: white;
+	height: 30px;
+	background-color: orange;
+	width: 100px;
+
+}
+.inputboxsearching:hover{
+	box-shadow: 2px 2px blue;
+
+}
+.inputboxsearching-2:hover{
+	background-color: darkgrey;
+	color: white;
+}
+
+.containernavigationswhenindex{
+	
+	background-color: white;
+	border-radius: 5px;
+	width: 100%;
+	height: auto;
+	border: 1px solid ghostwhite;
+	box-shadow: 2px 2px 2px grey;
+}
+
+

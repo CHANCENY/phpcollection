@@ -1,0 +1,158 @@
+.info-about-container{
+	flex-wrap: wrap;
+	display: flex;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	border: 1px solid beige;
+
+}
+.com-info{
+	flex-wrap: wrap;
+	display: flex;
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+.info-logo{
+   width: 400px;
+   height: auto;
+   margin: 10px;
+   border-radius: none;
+   margin-left: 5%;
+
+}
+.info-detail{
+	margin-left: 5%;
+	padding-left:5px;
+	background-color: white;
+	width: 50%;
+	height: auto;
+	margin-top: 1.5%;
+	margin-bottom: 1.5%;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+
+}
+.info-title{
+	margin-left: 10%;
+	font-size: xx-large;
+}
+.paragraph-info{
+	margin-left: 10px;
+
+}
+.icons-box{
+	margin-left: 20px;
+	margin-top: 10px;
+	width: auto;
+	height: auto;
+	
+	flex-wrap: wrap;
+	display: flex;
+}
+.follow{
+	margin-left: 10%;
+	color: black;
+	font-size: xx-large;
+}
+.ic{
+	margin-right: 20px;
+	width: 35px;
+	height: 35px;
+	border-radius: 100%;
+	margin-bottom: 10px;
+}
+.ic:hover{
+	box-shadow: 2px 2px 2px grey;
+  
+}
+.location-section-container{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+	margin-bottom: 10%;
+}
+.location-details-lapper{
+	width: 20%;
+	height: auto;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+	background-color: white;
+	padding-left: 20px;
+}
+.mapping-picture{
+	margin-left: 15%;
+	width: 700px;
+	height: auto;
+}
+.work-hour-container{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+.hours-lapper{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+
+}
+.bx-weeks{
+	width: 50%;
+	background-color: white;
+	height: auto;
+	margin-bottom: 5%;
+
+}
+.li{
+	margin-left: 25%;
+	padding: 2px;
+
+}
+
+.service-provider-search-enigne{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: large;
+	font-display: fallback;
+	font-family: sans-serif;
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+
+.input-fields-lapper{
+	
+	margin: 10%;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.input{
+	width: 200px;
+	height: 35px;
+	border-radius: 10px;
+	border-collapse: collapse;
+	border: 1px solid beige;
+	background-color: white;
+	font-size: large;
+	font-display: fallback;
+	font-family: sans-serif;
+	margin: 10px;
+}
+.closed-inputs{
+	margin-left: 15%;
+	margin-right: 10%;
+	background-color: #f8f8f8;
+}
