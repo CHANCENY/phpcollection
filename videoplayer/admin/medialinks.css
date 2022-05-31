@@ -1,0 +1,74 @@
+.medialinkscontainer
+{
+	width: 100%;
+	height: auto;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+}
+.mediaoutsidediv
+{
+	width: 30%;
+	height: auto;
+	margin-left: 28%;
+	margin-top: 10%;
+	background-color: floralwhite;
+	border: 1px solid beige;
+	border-radius: 5px;
+}
+.insideform
+{
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.inputfields
+{
+	width: 200px;
+	height: 40px;
+	margin-left: 10px;
+	font-family: sans-serif;
+	font-size: large;
+	margin-top: 3px;
+	border: 1px solid beige;
+}
+.buttons
+{
+	height: 40px;
+	width: 100px;
+	font-family: sans-serif;
+	font-size: large;
+	margin-left: 10px;
+	margin-top: 4px;
+	background-color: blue;
+	border: 1px solid blue;
+	color: white;
+	border-radius: 5px;
+}
+.buttons:hover
+{
+	background-color: orangered;
+	border: 1px solid orangered;
+}
+.head
+{
+	margin-left: 30%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+}
+.forms
+{
+	margin-top: 3%;
+}
+.remarking
+{
+	margin-left: 17%;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	margin-bottom: 10%;
+}
+.remarkingtwo
+{
+	margin-left: 30%;
+	margin-top: 3%;
+	
+}

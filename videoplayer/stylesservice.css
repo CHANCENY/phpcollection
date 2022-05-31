@@ -1,0 +1,51 @@
+.servicecontainering{
+	flex-wrap: wrap;
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	background-color: floralwhite;
+	
+}
+.servicecovering{
+	width: 40%;
+	height: auto;
+	border: 1px solid beige;
+	background-color: white;
+	border-collapse: collapse;
+	
+	margin-left: 5%;
+	margin-bottom: 5%;
+	flex-wrap: wrap;
+	display: flex;
+	background-color: white;
+	
+	border-radius: 5px;
+}
+.serviceimagepersoning{
+	width: 55%;
+	height: auto;
+	margin-left: none;
+	margin: 5px;
+	flex-wrap: wrap;
+	display: inline-grid;
+}
+.contentsservicesdetails{
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	margin-left: 2%;
+	margin-top: 4%;
+}
+.breakings{
+	flex-wrap: wrap;
+	display: flex;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	margin-left: none;
+	margin: 5px;
+	
+	
+}
+

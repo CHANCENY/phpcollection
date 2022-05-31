@@ -1,0 +1,100 @@
+.foot{
+	width: 100%;
+	height:auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: black;
+}
+.footrow{
+	margin-left: 40%;
+	font-family: sans-serif;
+	font-size: medium;
+	background-color: black;
+	color: white;
+	margin-top: 10%;
+}
+.lince{
+	font-size: small;
+	padding: 5px;
+}
+
+.footering{
+	margin-top: 20px;
+	width: 100%;
+	height: auto;
+	background-color: black;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 5px;
+}
+.rowfooter{
+	flex-wrap: wrap;
+	display: flex;
+}
+.footerlogoimage{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	margin: 5px;
+}
+.infooterdetailing{
+	font-family: sans-serif;
+	
+}
+.columns{
+	display: inline-grid;
+	flex-wrap: wrap;
+	width: auto;
+	height: 200px;
+	color: white;
+	background-color: black;
+	margin-top: 9.9px;
+	border-radius: 5px;
+	padding: 7px;
+	box-shadow: 2px 2px 2px yellow;
+	margin-bottom: 70px;
+	margin-right: 20px;
+}
+.groupfooterboxes{
+	flex-wrap: wrap;
+	display: inline-flex;
+	margin-left: auto;
+	margin-right: 20px;
+}
+h3{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-display: fallback;
+	font-size: large;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+.iconsimaging{
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+.iconsimaging:hover{
+	box-shadow: 2px 2px 2px green;
+}
+.columns:hover{
+	box-shadow: 2px 2px 2px blue;
+}
+h3:hover{
+	text-decoration: underline;
+	color: red;
+}
+.copyright{
+	color: white;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: small;
+}
+.copydiv{
+	margin-left: 35%;
+}
+.shifts-by-px{
+ text-align: center;
+}

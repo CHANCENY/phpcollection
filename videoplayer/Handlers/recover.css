@@ -1,0 +1,26 @@
+.recoveringsection
+{
+	width: 100%;
+	height: auto;
+	border: 1px solid beige;
+	background-color: floralwhite;
+	border-radius: 5px;
+	font-family: sans-serif;
+	font-size: large;
+	margin-top: 5%;
+}
+.insidedivrec
+{
+	margin-top: 5%;
+	margin-left: 30%;
+}
+
+.buttonstologin
+{
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+}
