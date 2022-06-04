@@ -848,6 +848,155 @@ class RecoveringAccount
 }
 
 
+class LikesCollectionAndViews
+{
+    private $conbject;
+
+
+    public function __construct()
+    {
+        $obj = new connection();
+        $this->conbject = $obj->connecting();
+    }
+
+    public function findingposition($owner,$serviceid)
+    {
+        $quer = "SELECT * FROM staticaltable WHERE owner='$owner' AND serviceid='$serviceid'";
+        $run = mysqli_query($this->conbject, $quer);
+        $re = mysqli_fetch_all($run,MYSQLI_ASSOC);
+
+        if(!empty($re))
+        {
+            return true;
+        }
+        else
+        {
+           $query2 = "INSERT INTO staticaltable(owner,serviceid) VALUES('$owner','$serviceid')";
+           if(mysqli_query($this->conbject,$query2))
+           {
+            return true;
+           }
+           
+        }
+    }
+
+
+    public function increasinglikes($owner,$serviceid,$total)
+    {
+       if(!empty($owner) && !empty($serviceid))
+       {
+
+           $pos = $this->findingposition($owner,$serviceid);
+           if($pos === true)
+           {
+              $like = intval($total);
+             if($like > 0)
+             {
+                $likedb =0;
+                $query = "SELECT * FROM staticaltable WHERE owner ='$owner' AND serviceid ='$serviceid'";
+                $run = mysqli_query($this->conbject, $query);
+                $result = mysqli_fetch_all($run,MYSQLI_ASSOC);
+
+                 foreach($result as $key)
+                 {
+                 $likedb = $key['liked'];
+                 }
+
+                 $sum = intval($likedb) + $like;
+
+                 $stringsum = strval($sum);
+
+                 $querys = "UPDATE staticaltable SET liked ='$stringsum' WHERE serviceid='$serviceid' AND owner ='$owner'";
+                 if(mysqli_query($this->conbject,$querys))
+                 {
+                   return $stringsum;
+                 }
+                 else
+                 {
+                    return false;
+                  }
+              }
+           }       
+       } 
+    }
+
+    public function increasingviewers($owner,$serviceid,$total)
+    {
+      if(!empty($owner) && !empty($serviceid))
+      {
+
+         $pos = $this->findingposition($owner,$serviceid);
+
+         if($pos === true)
+         {
+              $view = intval($total);
+            if($view > 0)
+           {
+            $query = "SELECT * FROM staticaltable WHERE owner ='$owner' AND serviceid ='$serviceid'";
+            $run = mysqli_query($this->conbject, $query);
+            $result = mysqli_fetch_all($run,MYSQLI_ASSOC);
+            
+            $viewdb = 0;
+
+            foreach($result as $key)
+            {
+               $viewdb = $key['views'];
+            }
+
+            $viewsum = intval($viewdb) + $view;
+
+            $stringview = strval($viewsum);
+            
+            $querys = "UPDATE staticaltable SET views ='$stringview' WHERE serviceid='$serviceid' AND owner ='$owner'";
+            mysqli_query($this->conbject, $querys);
+           
+            } 
+         }
+       
+      }
+    }
+
+    public function showinglikesandviews($owner,$serviceid)
+    {
+        if(!empty($owner) && !empty($serviceid))
+        {
+            $qu = "SELECT * FROM staticaltable WHERE owner='$owner' AND serviceid='$serviceid'";
+            $run = mysqli_query($this->conbject, $qu);
+            $res = mysqli_fetch_all($run,MYSQLI_ASSOC);
+             $like = null;
+             $view = null;
+            foreach($res as $key)
+            {
+               $like = $key['liked'];
+               $view = $key['views'];
+            }
+            
+            return $like.','.$view;
+        }
+    }
+
+    public function setlimitlikes($owner,$serviceid)
+    {
+        $q = "SELECT * FROM likedservicesviews WHERE owner='$owner' AND serviceid='$serviceid'";
+        $run = mysqli_query($this->conbject, $q);
+        $res = mysqli_fetch_all($run,MYSQLI_ASSOC);
+        if(!empty($res))
+        {
+            $query = "UPDATE likedservicesviews SET liked=true WHERE owner='$owner' AND serviceid='$serviceid'";
+            mysqli_query($this->conbject,$query);
+        }
+        else
+        {
+            $query = "INSERT INTO likedservicesviews(owner,serviceid,liked) VALUES('$owner','$serviceid'true)";
+            mysqli_query($this->conbject, $query);
+        }
+    }
+
+    
+
+}
+
+
  ?>
 
 

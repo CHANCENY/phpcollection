@@ -8,12 +8,32 @@ $_SESSION['op'] = 0;
  	{
          $rowid = $_GET['id'];
  	     $ownerid = $_GET['owner'];
+       $serviceid = $_GET['serviceid'];
+
          $_SESSION['viewed'] = fullnow($rowid, $ownerid);
          $_SESSION['infodata'] = infomore($ownerid);
+         increaseviews($ownerid, $serviceid);
+         $loves = getviewsandlikes($ownerid,$serviceid);
+         if(!empty($loves))
+         {
+           $list = explode(',', $loves);
+           $_SESSION['like'] = $list[0];
+           $_SESSION['views'] =$list[1];
+
+           if(empty($_SESSION['like']))
+           {
+            $_SESSION['like'] = strval(0);
+           }
+           if(empty($_SESSION['views']))
+           {
+            $_SESSION['views'] = strval(0);
+           }
+         }
  	}
 
  }
  ?>
+
 
 
 
@@ -29,6 +49,8 @@ $_SESSION['op'] = 0;
 		<p class="parag"><?php echo $key['description']; ?></p>
 		<label>posted on <?php echo $key['posted']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>charge <span style="color:darkgreen"><?php echo $key['charges']; ?></span></label>
     </form>
+    <?php $_SESSION['likedservicesid'] = $key['serviceid']; ?>
+     <?php $_SESSION['likedownerid'] = $key['owner']; ?>
 		<?php endforeach; ?>
        <?php endif; ?>
         <hr><br><br>
@@ -44,11 +66,15 @@ $_SESSION['op'] = 0;
           <a href="tel:<?php echo $p['phone']; ?>"><img src="https://img.icons8.com/fluency/48/000000/phone.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <a href="http://www.instagram.com/<?php echo $p['instagram']; ?>"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/></a>
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <a href="https://www.facebook.com/<?php echo $p['facebook']; ?>"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>
+           <a href="https://www.facebook.com/<?php echo $p['facebook']; ?>"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+           <a href="liked.php"><img src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/64/undefined/external-like-donation-and-charity-icongeek26-outline-colour-icongeek26.png"/></a>
+           <br><hr><br>
+           
+            <?php endforeach; ?>
+             <label>Likes&nbsp;<?php echo $_SESSION['like'] ?? null; ?></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Views&nbsp;&nbsp;<?php echo  $_SESSION['views'] ?? null; ?></label>
            <br><hr><br>
 
-            <?php endforeach; ?>
      <?php endif; ?>
 
       <?php foreach($_SESSION['viewed'] as $key): ?>
@@ -59,6 +85,8 @@ $_SESSION['op'] = 0;
            </form>
 
          <?php endforeach; ?>
+
+
 
 	</div>	
 	</div>

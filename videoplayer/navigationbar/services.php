@@ -29,6 +29,7 @@
 			<label class="breakings"><strong>Charges:</strong>&nbsp;<?php echo $key['charges']; ?></label>
 			<form action="fullviewing.php" method="get">
 				<input type="hidden" name="id" value="<?php echo $key['ID']; ?>">
+				<input type="hidden" name="serviceid" value="<?php echo $key['serviceid']; ?>">
 				<input type="hidden" name="owner" value="<?php echo $key['owner']; ?>">
 				<input type="submit" name="moreview" value="View details!" class="sendingbutton">
 			</form>
@@ -37,6 +38,9 @@
 			<label><strong>Description: </strong>&nbsp;<?php 
              $breaks = $key['description'];
              $full = null;
+             $size = strlen($breaks);
+             if($size >= 51)
+             {
              for($i=0; $i<=50; $i++){
              	
              	if($i < 50){             		
@@ -47,7 +51,9 @@
                   echo $full.'....';
              	}
 
-             } ?></label><br>
+             } 
+           }
+             else{ echo $key['description']; } ?></label><br>
 		</div>
 	</div>
 	

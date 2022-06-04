@@ -53,3 +53,11 @@
 	border: none;
 	height: auto;
 }
+.likedbutton
+{
+	border: none;
+	background-color: white;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}

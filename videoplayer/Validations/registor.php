@@ -20,6 +20,7 @@
     </label><input type="radio" name="radio" required value="Male"><label> Male</label>
     </label><input type="radio" name="radio" required value="Transgender"><label> Transgender</label>
     <p class="inputregis"><?php  echo 'part one of two'; ?></p>
+    <p class="inputregis"><?php  echo $_SESSION['messages'] ?? null; ?></p> 
     <input type="submit" name="regone" value="Save and continue..." class="sendingbutton" style="margin-left:20%">
     
      <?php elseif ($_SESSION['increament'] === 1): ?>

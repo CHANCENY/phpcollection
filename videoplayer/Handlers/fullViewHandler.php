@@ -30,6 +30,20 @@
     }
   }
 
+
+  function getviewsandlikes($owner,$serviceid)
+  {
+     $loves = new LikesCollectionAndViews();
+
+     return $loves->showinglikesandviews($owner,$serviceid);
+  }
+
+  function increaseviews($owner, $serviceid)
+  {
+    $ves = new LikesCollectionAndViews();
+    $ves->increasingviewers($owner,$serviceid,'1');
+  }
+
  
 
  ?>

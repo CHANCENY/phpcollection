@@ -9,6 +9,9 @@
  $_SESSION['login'] = false;
  $_SESSION['recovery'] = false;
  $_SESSION['rmessage'] = null;
+ $_SESSION['like'] = 0;
+$_SESSION['views'] = 0;
+
  
  header("Location: index2.php");
  ?>

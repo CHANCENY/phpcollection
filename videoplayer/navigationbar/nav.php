@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="fstyles.css">
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
    <script src="navigationbar/mapscript.js"></script>
-	<title>Brand name</title>
+	<title></title>
 </head> 
 <body>
  <section class="containernavigations">

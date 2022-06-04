@@ -57,7 +57,7 @@ include "../bankendconfig/BankendClasses.php";
        	 if(in_array($ext, $list))
        	 {
            $size = $file['size'];
-           if($size < 3000000)
+           if($size < 1000000)
            {
               $image = addslashes(file_get_contents($file['tmp_name']));
               $first =  $_POST['first'];
