@@ -11,6 +11,8 @@
  $_SESSION['rmessage'] = null;
  $_SESSION['like'] = 0;
 $_SESSION['views'] = 0;
+$_SESSION['likedby'] = null;
+$_SESSION['smslike'] =null;
 
  
  header("Location: index2.php");

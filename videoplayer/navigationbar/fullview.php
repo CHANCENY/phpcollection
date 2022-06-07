@@ -2,11 +2,14 @@
 include "Handlers/fullViewHandler.php";
 $_SESSION['image'] = null;
 $_SESSION['op'] = 0;
+
  if(isset($_GET['moreview']))
  {
  	if(!empty($_GET['id']) && !empty($_GET['owner']))
  	{
-         $rowid = $_GET['id'];
+    
+      
+       $rowid = $_GET['id'];
  	     $ownerid = $_GET['owner'];
        $serviceid = $_GET['serviceid'];
 
@@ -29,9 +32,9 @@ $_SESSION['op'] = 0;
             $_SESSION['views'] = strval(0);
            }
          }
+    }
  	}
 
- }
  ?>
 
 
@@ -87,8 +90,10 @@ $_SESSION['op'] = 0;
          <?php endforeach; ?>
 
 
-
+   <?php echo '<label style="margin-left:15%;">'.$_SESSION['smslike'].'</label>' ?? null; ?>
 	</div>	
 	</div>
+
+
 </section>
 

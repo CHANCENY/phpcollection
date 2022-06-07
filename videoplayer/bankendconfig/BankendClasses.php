@@ -881,11 +881,11 @@ class LikesCollectionAndViews
     }
 
 
-    public function increasinglikes($owner,$serviceid,$total)
+    public function increasinglikes($owner,$serviceid,$total,$liker)
     {
-       if(!empty($owner) && !empty($serviceid))
+       if(!empty($owner) && !empty($serviceid) && !empty($liker))
        {
-
+        $setl = $this->setlimitlikes($owner,$serviceid,$liker);
            $pos = $this->findingposition($owner,$serviceid);
            if($pos === true)
            {
@@ -901,22 +901,34 @@ class LikesCollectionAndViews
                  {
                  $likedb = $key['liked'];
                  }
-
-                 $sum = intval($likedb) + $like;
-
-                 $stringsum = strval($sum);
-
-                 $querys = "UPDATE staticaltable SET liked ='$stringsum' WHERE serviceid='$serviceid' AND owner ='$owner'";
-                 if(mysqli_query($this->conbject,$querys))
+                 
+                 if($setl === true)
                  {
-                   return $stringsum;
+                   $sum = intval($likedb) + $like;
+
+                    $stringsum = strval($sum);
+
+                    $querys = "UPDATE staticaltable SET liked ='$stringsum' WHERE serviceid='$serviceid' AND owner ='$owner'";
+                    $query1 = "UPDATE staticaltable SET likedby ='$liker' WHERE serviceid='$serviceid' AND owner ='$owner'";
+                    if(mysqli_query($this->conbject,$querys))
+                     {
+                        if(mysqli_query($this->conbject, $query1))
+                         {
+                            return $stringsum;
+                          }
+                     }
+                     else
+                     {
+                        return false;
+                     }
                  }
                  else
                  {
-                    return false;
-                  }
+                    return $likedb;
+                 }
               }
-           }       
+           }
+
        } 
     }
 
@@ -975,20 +987,32 @@ class LikesCollectionAndViews
         }
     }
 
-    public function setlimitlikes($owner,$serviceid)
+    public function setlimitlikes($owner,$serviceid,$liker)
     {
-        $q = "SELECT * FROM likedservicesviews WHERE owner='$owner' AND serviceid='$serviceid'";
-        $run = mysqli_query($this->conbject, $q);
-        $res = mysqli_fetch_all($run,MYSQLI_ASSOC);
-        if(!empty($res))
+        $q = "SELECT * FROM staticaltable WHERE owner='$owner' AND serviceid ='$serviceid'";
+        $run = mysqli_query($this->conbject,$q);
+        $resv= mysqli_fetch_all($run,MYSQLI_ASSOC);
+
+        if(!empty($resv))
         {
-            $query = "UPDATE likedservicesviews SET liked=true WHERE owner='$owner' AND serviceid='$serviceid'";
-            mysqli_query($this->conbject,$query);
+            $likedb =null;
+           foreach($resv as $key)
+           {
+             $likedb = $key['likedby'];
+           }
+
+           if($likedb === $liker)
+           {
+            return false;
+           }
+           else
+           {
+            return true;
+           }
         }
         else
         {
-            $query = "INSERT INTO likedservicesviews(owner,serviceid,liked) VALUES('$owner','$serviceid'true)";
-            mysqli_query($this->conbject, $query);
+            return true;
         }
     }
 
