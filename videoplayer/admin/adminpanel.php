@@ -5,6 +5,7 @@
    $userfullname = null;
    $userdescription = null;
    $profileimage = null;
+   $_SESSION['moresms'] = null;
    
    if(!empty($_SESSION['userin']))
    {

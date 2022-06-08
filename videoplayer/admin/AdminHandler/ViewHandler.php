@@ -34,4 +34,10 @@ include "../bankendconfig/BankendClasses.php";
      return $tm->savingmorephoto($id, $image);
   }
 
+  function recursiveaddingphotos($servid, $obj)
+  {
+    $rec = new MoreImages();
+    return $rec->addingmoreimagesinlooping($servid,$obj);
+  }
+
  ?>

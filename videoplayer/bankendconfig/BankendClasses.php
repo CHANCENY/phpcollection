@@ -61,7 +61,7 @@ class connection
  				// writing query to database
 
                 $query ="INSERT INTO users(username,fullname,gender,birthday,email,phone,joined,profile,race,address,description,password,join_id) VALUES('$username','$fullname','$gender','$birthday','$email','$phone','$joined','$profile','$race','$address','$descp','$password','$join_id')";
-
+              try{
                 if(mysqli_query($this->conbject,$query))
                 {
                     $qu = "INSERT INTO socialmedia(owner,fullname) VALUES('$join_id','$fullname')";
@@ -71,6 +71,11 @@ class connection
                     }
                     
                 }
+            }
+            catch(Exception $e)
+            {
+                return false;
+            }
  			}
 
             return false;
@@ -141,11 +146,16 @@ class connection
             $image = $obj3['upload'.strval($i)];
             $serviceid = $this->servieidgenetor();
             $query = "INSERT INTO services(owner,title,category,charges,available,description,image,serviceid) VALUES('$owner_id','$title','$category','$charges','$available','$descs','$image','$serviceid')";
-            
+          try{
             if(mysqli_query($this->conbject,$query))
             {
                $counter++; 
             }
+        }
+        catch(Exception $e)
+        {
+            continue;
+        }
         }
 
         if($total === $counter)
@@ -191,7 +201,7 @@ class connection
        if(!empty($id))
         {
             $query = "UPDATE `users` SET `$type` = '$newinfo' WHERE `users`.`ID` = $id;";
-            
+         try{  
            if(mysqli_query($this->conbject, $query))
             {
                 return true;
@@ -200,6 +210,11 @@ class connection
             {
                 return false;
             }
+        }
+        catch(Exception $e)
+        {
+            return false;
+        }
         }
         else
         {
@@ -265,6 +280,7 @@ class serviceViewChange
         {
             $id = intval($posid);
             $querys = "UPDATE `services` SET `$type` = '$value' WHERE `services`.`ID` =$id;";
+        try{
             if(mysqli_query($this->conbject, $querys))
             {
               
@@ -275,6 +291,11 @@ class serviceViewChange
               
                 return false;
             }
+        }
+        catch(Exception $e)
+        {
+            $error = $e;
+        }
         }
     }
 
@@ -451,19 +472,34 @@ class SocialMediaLinks
         if(!empty($res))
         {
            $query1 = "UPDATE socialmedia SET $type = '$link' WHERE owner ='$owner'";
+
+        try{
            $runs = mysqli_query($this->conbject, $query1);
            if($run)
            {
             return true;
            }
+
+          }
+          catch(Exception $e)
+          {
+            return false;
+          }
         }
         else
         {
            $query2 = "INSERT INTO socialmedia($type) VALUES('$link')";
+
+         try{ 
            if(mysqli_query($this->conbject, $query2))
            {
             return true;
            }
+          }
+          catch(Exception $e)
+          {
+            return false;
+          }
         }
 
         return false;
@@ -519,6 +555,8 @@ class TroubledPassword
     public function changecommit($email, $user, $new)
     {
         $qu = "UPDATE users SET password = '$new' WHERE email ='$email' AND username = '$user'";
+
+       try{ 
         if(mysqli_query($this->conbject, $qu))
         {
             return true;
@@ -527,6 +565,11 @@ class TroubledPassword
         {
             return false;
         }
+    }
+    catch(Exception $e)
+    {
+        return false;
+    }
     }
 }
 
@@ -697,6 +740,45 @@ class MoreImages
         else
         {
             return false;
+        }
+    }
+
+    public function addingmoreimagesinlooping($servid,$imobject)
+    {
+        $size = count($imobject);
+        $failed = 0;
+        $suces = 0;
+        for ($i=0; $i < $size; $i++) { 
+            $image = $imobject[$i];
+            $query ="INSERT INTO photostorage(serviceid,photos) VALUES('$servid','$image')";
+
+        try{
+            if(mysqli_query($this->conbject, $query))
+            {
+                $suces = $suces + 1;
+                continue;
+            }
+            else
+            {
+                
+                $failed = $failed + 1;
+                 continue;
+            }
+        }
+        catch(Exception $e)
+        {
+            $failed = $failed + 1;
+              continue;
+        }
+        }
+
+        if($suces < $size || $suces === $size)
+        {
+            return strval($failed).','.strval($suces);
+        }
+        else
+        {
+            return true;
         }
     }
 }

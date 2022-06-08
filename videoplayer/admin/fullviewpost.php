@@ -193,34 +193,61 @@ if(isset($_POST['photochange']))
 
 if(isset($_POST['addmore']))
 {
-    echo "first<br>";
+   
   if(!empty($_FILES['adduploadimage']) && !empty($_POST['photoidadd']))
   {
-     echo "second<br>";
-    $file = $_FILES['adduploadimage']['name'];
-    $nameandext = explode('.', $file);
-    $ext = strtolower(end($nameandext));
-    $list = array('jpg','jpeg','png','svg','webp');
-    if(in_array($ext, $list))
-    {
-        $size = $_FILES['adduploadimage']['size'];
-        if($size < 3000000)
+
+    $imageslist = array('sample');
+    $sizes = 0;
+    $failed = 0;
+     foreach($_FILES['adduploadimage']['name'] as $key =>$value)
+     {
+        
+        $filename = $_FILES['adduploadimage']['name'][$key];
+        $tmp = $_FILES['adduploadimage']['tmp_name'][$key];
+        $size = $_FILES['adduploadimage']['size'][$key];
+        $ext = pathinfo($filename,PATHINFO_EXTENSION);
+        $list = array('jpg','jpeg','png','svg','webp');
+
+        if(in_array(strtolower($ext), $list))
         {
-             echo "third<br>";
-            $im = addslashes(file_get_contents($_FILES['adduploadimage']['tmp_name']));
-            
-            $res = addingmoreimage($im,$_POST['photoidadd']);
-            if($res === true)
+            if($size < 2000000)
             {
-               header("Location: ../admin/fullviewpost.php");  
+                $img = addslashes(file_get_contents($tmp));
+                array_push($imageslist, $img);
+                $sizes = $sizes + 1;
             }
             else
             {
-                 header("Location: ../admin/fullviewpost.php");
+                $failed = $failed + 1;
             }
         }
-    }
-  }
+        else
+        {
+            $failed = $failed + 1;
+        }
+     }
+
+     if(count($imageslist) > 1)
+     {
+        $imageslist = array_reverse($imageslist);
+        array_pop($imageslist);
+        $imageslist = array_reverse($imageslist);
+     $result = recursiveaddingphotos($_POST['photoidadd'], $imageslist);
+     if($result === true)
+     {
+        $_SESSION['moresms'] = "All images successfully uploaded";
+     }
+     else
+     {
+        $feed = explode(',', $result);
+        $failed = $failed + intval($feed[0]);
+        $_SESSION['moresms'] = end($feed).' uploaded and '.strval($failed).' failed';
+     }
+   }
+ }
+
+
 }
 
  ?>
@@ -339,8 +366,9 @@ if(isset($_POST['addmore']))
                     <label class="labels">Photos to post</label>
                     <form action="fullviewpost.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="photoidadd" value="<?php echo $_SESSION['tomoreimage']; ?>">
-                        <input type="file" name="adduploadimage">
-                        <input type="submit" name="addmore" value="Add image" class="changebutton">
+                        <input type="file" name="adduploadimage[]" multiple>
+                        <input type="submit" name="addmore" value="Add image" class="changebutton"><br>
+                        <label><?php echo $_SESSION['moresms'] ?? null; ?></label>
                     </form>
                  </div>
 
