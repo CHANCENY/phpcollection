@@ -34,6 +34,7 @@ include "../../bankendconfig/BankendClasses.php";
  	{
  		 $_SESSION['delesms'] ="Account deleted successfully";
        	   $_SESSION['userin'] = null;
+               $_SESSION['login'] = false;
  		   header('Location: ../../homepage.php');
  	}
  	elseif ($deleresult === false){

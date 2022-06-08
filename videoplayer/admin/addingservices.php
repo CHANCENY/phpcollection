@@ -24,6 +24,35 @@
  	}	
  }
 
+if(isset($_GET['reduce']))
+{
+  $size = $_SESSION['total'];
+  $totalremove = 0;
+  $totalremove = intval($_GET['specified']);
+
+  if($size > 1)
+  {
+    if($totalremove === 0)
+    {
+       $_SESSION['total'] = $_SESSION['total'] - 1;
+       $_SESSION['gohome'] = 'Back to admin panel <a href="adminpanel.php">click here now!</a>';
+    }
+    else
+    {
+      $_SESSION['total'] = $_SESSION['total'] - $totalremove;
+      $_SESSION['gohome'] = 'Back to admin panel <a href="adminpanel.php">click here now!</a>';
+    }
+
+  }
+  else
+  {
+    $_SESSION['gohome'] = 'Back to admin panel <a href="adminpanel.php">click here now!</a>';
+    $_SESSION['statusimages'] = "Minimum number of rows reached!";
+  }
+  
+}
+
+
  ?>
 
 
@@ -87,6 +116,16 @@
      	          
      	</form>
      </section>
+     
+     <form method="get" style="margin-bottom:10%;">
+       <?php if($_SESSION['total'] > 1): ?>
+         <input type="number" min="1" max="<?php echo strval($_SESSION['total'] -1); ?>" name="specified" class="inputservtwo" placeholder="0" style="margin-left:30%;margin-top: 10px;">
+        <input type="submit" name="reduce" value="Remove post row!" class="setservicebutton" style="margin-left:2%;margin-top: 10px;">
+         <?php elseif($_SESSION['total'] === 1): ?>
+        <label><?php echo $_SESSION['gohome'] ?? null; ?></label>
+      <?php endif; ?>
+     </form>
+  
 
 <?php endif; ?>
 </body>

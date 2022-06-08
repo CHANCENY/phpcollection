@@ -200,9 +200,17 @@ if(isset($_POST['addmore']))
     $imageslist = array('sample');
     $sizes = 0;
     $failed = 0;
+    $counterallowed = 0;
+    $all = 0;
+    foreach($_FILES['adduploadimage']['name'] as $key =>$value)
+    {
+       $all = $all + 1;
+    }
+
+
      foreach($_FILES['adduploadimage']['name'] as $key =>$value)
      {
-        
+        if($counterallowed < 7){
         $filename = $_FILES['adduploadimage']['name'][$key];
         $tmp = $_FILES['adduploadimage']['tmp_name'][$key];
         $size = $_FILES['adduploadimage']['size'][$key];
@@ -216,6 +224,7 @@ if(isset($_POST['addmore']))
                 $img = addslashes(file_get_contents($tmp));
                 array_push($imageslist, $img);
                 $sizes = $sizes + 1;
+                $counterallowed = $counterallowed + 1;
             }
             else
             {
@@ -226,6 +235,13 @@ if(isset($_POST['addmore']))
         {
             $failed = $failed + 1;
         }
+       }
+       else
+       {
+        $remin = $all - 7;
+        $failed = $failed + $remin;
+        break;
+       }
      }
 
      if(count($imageslist) > 1)
