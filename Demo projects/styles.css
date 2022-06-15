@@ -1,0 +1,176 @@
+.outsidediv{
+	margin-left: 30%;
+	margin-top: 2%;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	font-weight: 700;
+	width: auto;
+
+}
+.form{
+	padding: 2%;
+	border: 1px solid beige;
+	background: floralwhite;
+	border-radius: 5px;
+	border-collapse: collapse;
+	padding-right: 4%;
+	width: auto;
+	display: inline-block;
+	flex: wrap;
+}
+.h1{
+	margin-left: 3%;
+}
+.field{
+	margin-left: 10%;
+	width: auto;
+	margin-right: 4%;
+	padding-top: 7%;
+	margin-top: 5%;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	font-weight: 500;
+	border: 1px solid white;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0.9px 0.9px greenyellow;	
+}
+.field:hover{
+	border: 1px solid blue;
+	box-shadow: 1px lightgrey;
+	color: red;
+}
+.button{
+	width: auto;
+	padding: 2%;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	font-weight: 500;
+	background: blue;
+	color: white;
+	border-radius: 2px;
+	border: 1px solid blue;
+	border-collapse: collapse;
+	margin-top: 5%;
+	margin-left: 15%;
+}
+.button:hover{
+	width: auto;
+	padding: 2%;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	font-weight: 500;
+	background: orange;
+	color: black;
+	border-radius: 2px;
+	border: 1px solid orange;
+	border-collapse: collapse;
+	margin-top: 5%;
+	margin-left: 15%;
+}
+.labelsuccess{
+	margin-left: 10%;
+	width: auto;
+	color: white;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	font-weight: 500;
+	background-color: green;
+	padding: 3%;
+	border-radius: 2px;
+	display: flex;
+	flex: wrap;
+}
+.labelfailed{
+	margin-left: 10%;
+	width: auto;
+	color: white;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	font-weight: 500;
+	background-color:red;
+	padding: 3%;
+	border-radius: 2px;
+	display: flex;
+	flex: wrap;
+}
+.welcomenote{
+	margin-left: 10%;
+	width: auto;
+	color: white;
+	font-family: sans-serif;
+	font-display: fallback;
+	font-size: large;
+	font-weight: 500;
+	background-color:blue;
+	padding: 3%;
+	border-radius: 2px;
+	display: flex;
+	flex: wrap;
+}
+
+.contentcontainer{
+	width: 100%;
+	height: auto;
+	background-color: white;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+	font-weight: 700;
+}
+.outlogin{
+	width: 50%;
+	height: auto;
+	border: 1px solid beige;
+	background-color: floralwhite;
+	margin-left: 20%;
+	margin-top: 5%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.logo
+{
+	width: 150px;
+	height: auto;
+	border-radius: 100%;
+	margin-left: 33%;
+}
+h1{
+	margin-left: 31%;
+}
+.formdiv{
+	margin-top: 4%;
+	margin-left: 20%;
+	width: auto;
+	height: auto;
+	display: flex;
+	flex: wrap;
+	background-color: orange;
+	display: flex;
+	flex: wrap;
+}
+.fields{
+	width: auto;
+	height: 36px;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+	font-weight: 500;
+	margin-left: 7%;
+}
+.fieldss{
+	width: auto;
+	height: 36px;
+	font-family: sans-serif;
+	font-size: large;
+	font-display: fallback;
+	font-weight: 500;
+	margin-left: 3%;
+
+}
