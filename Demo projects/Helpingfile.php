@@ -1,6 +1,8 @@
 <?php 
 include "../enctyptor/Securing.php";
 
+session_start();
+
  function checkuserexitinDB($username)
  {
  	$conn = new mysqli("localhost","root",null,"sample");
@@ -33,14 +35,14 @@ include "../enctyptor/Securing.php";
  	}
  }
 
- function saveuser($username,$first,$last,$email,$password)
+ function saveuser($username,$first,$last,$email,$password,$pro)
  {
     $encyp = new SecurePassword();
     $encpted_password = $encyp->savingpassword_encripted_format($password);
     if($encpted_password !== false)
     {
       $conn = new mysqli("localhost","root",null,"sample");
-      $query ="INSERT INTO encp(username,password,firstname,lastname,email) VALUES('$username','$encpted_password','$first','$last','$email')";
+      $query ="INSERT INTO encp(username,password,firstname,lastname,email,profile) VALUES('$username','$encpted_password','$first','$last','$email','$pro')";
 
      try{ 
       if(mysqli_query($conn, $query))
@@ -72,6 +74,7 @@ include "../enctyptor/Securing.php";
     $validateuser = new SecurePassword();
     if($validateuser->validate_password($password,$username,null,$conn,"encp"))
     {
+      $_SESSION['userlogged'] = $validateuser->get_user_all_info();
       return $validateuser->getuser();
     }
     else
@@ -79,6 +82,26 @@ include "../enctyptor/Securing.php";
       return false;
     }
   }
+ }
+
+ function delete($username,$email,$password,$firstname)
+ {
+  try{
+      $conn = new mysqli("localhost","root",null,"sample");
+      $query ="DELETE FROM encp WHERE firstname='$firstname' AND username='$username' AND email='$email' AND password='$password'";
+      if(mysqli_query($conn,$query))
+        {
+           return true;
+        }
+        else
+        {
+          return false;
+        }
+    }
+    catch(Exception $e)
+    {
+      return false;
+    }
  }
 
  ?>

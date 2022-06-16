@@ -172,5 +172,29 @@ h1{
 	font-display: fallback;
 	font-weight: 500;
 	margin-left: 3%;
-
+}
+.outdiv{
+	width: auto;
+	height: auto;
+	display: flex;
+	flex: wrap;
+	margin-left: 10%;
+	margin-top: 7%;
+}
+.images{
+	width: 550px;
+	height: auto;
+}
+.info{
+	width: 45%;
+	height: 30%;
+	background-color: floralwhite;
+	border: 1px solid beige;
+	margin-bottom: 2%;
+}
+.inside{
+	background-color: floralwhite;
+}
+p{
+	margin-left: 20%;
 }

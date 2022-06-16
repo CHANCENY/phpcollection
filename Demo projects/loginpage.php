@@ -20,7 +20,10 @@ include "Helpingfile.php";
      else
      {
      	$message = "You have successfully logged in our user ".$res;
-        $stylemessage ="labelsuccess";
+      $_SESSION['nameofuser'] = $res;
+      global $delete;
+      $_SESSION['delete'] = false;
+      $stylemessage ="labelsuccess";
  	    //echo '<META HTTP-EQUIV="Refresh" Content="3; URL=loginpage.php">';
      }
 
