@@ -13,7 +13,7 @@ if(!empty($_GET['token']) && !empty($_GET['usern']))
 }
 }
 
-if(isset($_POST['ver']))
+if(isset($_POST['velidate']))
 {
 	if(!empty($_POST['tok']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['user']))
 	{
@@ -54,7 +54,7 @@ if(isset($_POST['ver']))
 			<input type="hidden" name="tok" value="<?php echo $_SESSION['token']; ?>">
 			<input type="email" name="email" placeholder="Enter email your have used to register" required class="inputreg">
 			<input type="password" name="password" placeholder="Enter password you have used" class="inputreg">
-			<input type="submit" name="ver" value="Verify account" class="buttonlogin">
+			<input type="submit" name="velidate" value="Verify account" class="buttonlogin">
 			<label><?php echo $_SESSION['messages']; ?></label>
 		</form>
 	<?php endif; ?>

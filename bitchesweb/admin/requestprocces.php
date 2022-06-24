@@ -1,6 +1,8 @@
 <?php 
 session_start();
 
+include "backendhandlersfiles/AdminClass.php";
+
  if(isset($_GET['addpost']))
  {
  	header("Location: ../offer.php");
@@ -25,7 +27,14 @@ session_start();
  {
     $_SESSION['logged'] = null;
     $_SESSION['status'] = false;
+    $_SESSION['username'] = null;
+    $_SESSION['joinid'] = null;
     header("Location: ../home.php");
+ }
+
+ if(isset($_GET['deletenow']))
+ {
+    header("Location: ../deleteaccount.php");
  }
 
  ?>

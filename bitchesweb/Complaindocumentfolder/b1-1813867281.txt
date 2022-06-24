@@ -1,0 +1,467 @@
+                  Type Conversion in C++
+This is process of converting one datatype into another. In other words, converting an expression of a given type into another it is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called as implicit conversion
+2. Type casting otherwise called as explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when a data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data type and permit conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+
+                  Type Conversion in C++
+This is the process of converting one data into another. In other words, converting an expression of a given type into another is called casting.
+Two forms of conversion namely
+ 1. Automatic conversion: - otherwise called implicit conversion
+2. Type casting otherwise called explicit conversion
+Implicit conversion
+The conversion doesn`t require any operator.
+They are automatically performed when data is copied to a compatible type.
+Example:
+           short a = 300;
+            Int b;
+            B = a;
+Here, the data of (a) has been prompted from (short type) to (int type)
+We didn`t specify any type-casting operator. This is often also called standard-conversion
+Standard conversion affects fundamental data types and permits conversions like conversion between numerical types
+Examples 
+       - short to int
+       - int to float
+       -double to int
+The hierarchy of data-types is as follows:
+Long double -> double -> float -> long int -> int -> char
+               1.       long double
+               2.       double
+               3.       float
+               4.       long int
+               5.       int
+               6.       char
+
+ Explicit Type conversion 
+Explicit conversion will be done using the type cast operator and therefore general syntax
+* Datatype (expression);
+-Here within the above datatype is that the type which the programmer wants the expression to gets changed
+In C++ the type-casting can be done in following ways
+  - C-style casting
+  - C++ style casting
+C-style casting: takes the syntax as
+                            (datatype)expression;
+For example:  
+                           (Int) 3.7;
+C++ style casting: takes the syntax as:
+                        Datatype(expression);
+For example:
+                       Int (3.7);
+This method was adopted since it provides more clarity to the C++ programmers instead of C-style casting
+Illustration of casting methods in C++
+ 
+OUTPUT:
+ 
+In the above program variable (a) is declared as integer and (b) and © are declared as float
+In the type conversion statement namely
+C = float(a) + b;
+The variable (a) of type integer is converted into float type and so the value 2 is converted to 2.0 and added to b which value is 5.5 and provides the results of 7.5. 
+

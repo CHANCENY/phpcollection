@@ -216,7 +216,7 @@
  	{
  		if(!empty($letter))
  		{
- 			for ($i=0; $i < $this->checkdivisor; $i++) { 
+ 			for ($i=1; $i <= $this->checkdivisor; $i++) { 
  				if($letter === $this->checkdivisor[$i])
  				{
  					return $i;
