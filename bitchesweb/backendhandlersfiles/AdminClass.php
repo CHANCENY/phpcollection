@@ -184,6 +184,24 @@ class Admin
 
   public function addingvideos($videos,$servid)
   {
+
+    $qu = "SELECT * FROM videos WHERE service='$servid'";
+    $run = mysqli_query($this->con, $qu);
+    $result = mysqli_fetch_all($run,MYSQLI_ASSOC);
+    
+    $toupload = null;
+
+    if(!empty($result))
+    {
+        foreach ($result as $key) {
+          $toupload = $key['videos'];  
+        }
+    }
+
+    $videos .= $toupload;
+
+    if(empty($toupload))
+    {
   	$query ="INSERT INTO videos(service,videos) VALUES('$servid','$videos')";
   	try{
   		if(mysqli_query($this->con, $query))
@@ -197,6 +215,24 @@ class Admin
   	}catch(Exception $e){
   		return $e->getMessage();
   	}
+  }
+  else
+  {  
+    $query ="UPDATE videos SET videos='$videos' WHERE service='$servid'";
+    try{
+        if(mysqli_query($this->con, $query))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }catch(Exception $e){
+        return $e->getMessage();
+    }
+
+  }
   }
 
 
